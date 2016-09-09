@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include shopchemical *.css
+recursive-include shopchemical *.csv
+recursive-include shopchemical *.html
+recursive-include shopchemical *.ico
+recursive-include shopchemical *.js
+recursive-include shopchemical *.json
+recursive-include shopchemical *.md
+recursive-include shopchemical *.png
+recursive-include shopchemical *.py
+recursive-include shopchemical *.svg
+recursive-include shopchemical *.txt
+recursive-exclude shopchemical *.pyc

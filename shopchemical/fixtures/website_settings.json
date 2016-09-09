@@ -1,0 +1,159 @@
+[
+ {
+  "address": "<div class=\"row\">\n    <div class=\"col-xs-2 text-center\"></div>\n    <div class=\"col-xs-3 text-center\">\n         <h2><b>\n        <img alt=\"Smiley face\" height=\"15%\" src=\"http://shopchemical.com/files/skype.png\" width=\"15%\"> \n         <a>shopchemical</a> <br>\n    </b></h2>\n\n    </div>\n    <div class=\"col-xs-4 text-center\">\n         <h2><b>\n\n        <img alt=\"Smiley face\" height=\"15%\" src=\"http://shopchemical.com/files/whatsapp.png\" width=\"15%\">\n\n        <a>00919846462200 <br></a> \n            </b></h2>\n\n    </div>\n    <div class=\"col-xs-3 text-center\">\n         <h2><b>\n\n            <a href=\"https://www.facebook.com/chemtechQatar\" target=\"_blank\">\n            <img alt=\"Smiley face\" height=\"30%\" src=\"http://shopchemical.com/files/fb.png\" width=\"30%\"> \n\n            </a>\n            </b></h2>\n\n    </div>\n</div>", 
+  "banner_html": "<a href=\"/\"><img src=\"http://shopchemical.com/files/shopchemical_bannerfff543.jpg\" style=\"max-width: 61%;\"></a>", 
+  "banner_image": "/files/shopchemical_bannerfff543.jpg", 
+  "brand_html": "", 
+  "copyright": "", 
+  "disable_signup": 0, 
+  "docstatus": 0, 
+  "doctype": "Website Settings", 
+  "facebook_share": 0, 
+  "favicon": "/files/c-key-152-212418.png", 
+  "footer_items": [], 
+  "google_analytics_id": null, 
+  "google_plus_one": 0, 
+  "head_html": null, 
+  "hide_footer_signup": 0, 
+  "home_page": "chemtech", 
+  "home_page_is_products": 0, 
+  "linked_in_share": 0, 
+  "modified": "2016-07-24 22:25:16.770139", 
+  "name": "Website Settings", 
+  "sidebar_items": [], 
+  "subdomain": null, 
+  "title_prefix": null, 
+  "top_bar_items": [
+   {
+    "label": "Product", 
+    "parent_label": "", 
+    "right": 0, 
+    "target": "", 
+    "url": null
+   }, 
+   {
+    "label": "Industy Chemical", 
+    "parent_label": "Product", 
+    "right": 0, 
+    "target": "", 
+    "url": "/products/industrial"
+   }, 
+   {
+    "label": "Water Treatment Chemicals", 
+    "parent_label": "Product", 
+    "right": 0, 
+    "target": "", 
+    "url": "/products/water-treatment-chemicals"
+   }, 
+   {
+    "label": "Swimming Pool Chemicals", 
+    "parent_label": "Product", 
+    "right": 0, 
+    "target": "", 
+    "url": "/products/swimming-pool-chemicals"
+   }, 
+   {
+    "label": "Pest Control", 
+    "parent_label": "Product", 
+    "right": 0, 
+    "target": "", 
+    "url": "/products/pest-control"
+   }, 
+   {
+    "label": "Brand", 
+    "parent_label": null, 
+    "right": 0, 
+    "target": "", 
+    "url": null
+   }, 
+   {
+    "label": "Sasol", 
+    "parent_label": "Brand", 
+    "right": 0, 
+    "target": "", 
+    "url": "/products/sasol"
+   }, 
+   {
+    "label": "Buying On ShopChemical", 
+    "parent_label": null, 
+    "right": 0, 
+    "target": "", 
+    "url": "buying-on-shopchemical"
+   }, 
+   {
+    "label": "Partnership Card", 
+    "parent_label": null, 
+    "right": 0, 
+    "target": "", 
+    "url": "partnership-card"
+   }, 
+   {
+    "label": "Contact", 
+    "parent_label": null, 
+    "right": 0, 
+    "target": "", 
+    "url": "contact"
+   }, 
+   {
+    "label": "Select Country", 
+    "parent_label": "", 
+    "right": 1, 
+    "target": "", 
+    "url": null
+   }, 
+   {
+    "label": "Bahrain", 
+    "parent_label": "Select Country", 
+    "right": 0, 
+    "target": "", 
+    "url": "http://bh.shopchemical.com/"
+   }, 
+   {
+    "label": "India", 
+    "parent_label": "Select Country", 
+    "right": 0, 
+    "target": "", 
+    "url": "http://in.shopchemical.com/"
+   }, 
+   {
+    "label": "Kuwait", 
+    "parent_label": "Select Country", 
+    "right": 0, 
+    "target": "", 
+    "url": "http://kw.shopchemical.com/"
+   }, 
+   {
+    "label": "Oman", 
+    "parent_label": "Select Country", 
+    "right": 0, 
+    "target": "", 
+    "url": "http://om.shopchemical.com/"
+   }, 
+   {
+    "label": "Qatar", 
+    "parent_label": "Select Country", 
+    "right": 0, 
+    "target": "", 
+    "url": "http://qa.shopchemical.com/"
+   }, 
+   {
+    "label": "Saudi Arabia", 
+    "parent_label": "Select Country", 
+    "right": 0, 
+    "target": "", 
+    "url": "http://sa.shopchemical.com/"
+   }, 
+   {
+    "label": "UAE", 
+    "parent_label": "Select Country", 
+    "right": 0, 
+    "target": "", 
+    "url": "http://uae.shopchemical.com/"
+   }
+  ], 
+  "twitter_share": 0, 
+  "twitter_share_via": null, 
+  "website_theme": "Standard", 
+  "website_theme_image_link": null
+ }
+]
