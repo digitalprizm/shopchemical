@@ -1,7 +1,7 @@
 [
  {
   "address": "<div class=\"row\">\n    <div class=\"col-xs-2 text-center\"></div>\n    <div class=\"col-xs-3 text-center\">\n         <h2><b>\n        <img alt=\"Smiley face\" height=\"15%\" src=\"http://shopchemical.com/files/skype.png\" width=\"15%\"> \n         <a>shopchemical</a> <br>\n    </b></h2>\n\n    </div>\n    <div class=\"col-xs-4 text-center\">\n         <h2><b>\n\n        <img alt=\"Smiley face\" height=\"15%\" src=\"http://shopchemical.com/files/whatsapp.png\" width=\"15%\">\n\n        <a>00919846462200 <br></a> \n            </b></h2>\n\n    </div>\n    <div class=\"col-xs-3 text-center\">\n         <h2><b>\n\n            <a href=\"https://www.facebook.com/chemtechQatar\" rel=\"nofollow\" target=\"_blank\">\n            <img alt=\"Smiley face\" height=\"30%\" src=\"http://shopchemical.com/files/fb.png\" width=\"30%\"> \n\n            </a>\n            </b></h2>\n\n    </div>\n</div>                          ", 
-  "banner_html": "<a href=\"/\"><img src=\"/files/shopchemical_banner-cropfff543.png\" style=\"max-width: 23%;\"></a>\n\n<style>\n.navbar-default {\n  background-color: #f5f7fa;\n  border-color: #ebeff2;\n}\n</style>", 
+  "banner_html": "<div class=\"row\">\n    <div class=\"col-md-3\">\n        <a href=\"/\"><img src=\"/files/shopchemical_banner-cropfff543.png\" style=\"max-width: 80%;\"></a>\n    </div>\n    <div class=\"col-md-6\"></div>\n    <div class=\"col-md-3\">\n        <a href=\"/\"><img src=\"/files/shopchemical.png\" style=\"max-width: 80%;visibility:hidden\"></a>\n    </div>\n<div>\n\n\n<style>\n.product-image-wrapper {\n   width: 14vw!important;\n}\n\n.product-text {font-size:11px}\n.navbar-default {\n  background-color: #f5f7fa;\n  border-color: #ebeff2;\n}\n.footer-links{\n  display:none; \n}\n\n.getQuote{\n    margin-left: 100px;\n    margin-top: -54px;\n}\n\n.item-msds {\n    margin-top: -5px;\n    margin-left: 30px;\n}\n</style>\n", 
   "banner_image": null, 
   "brand_html": "", 
   "copyright": "Shopchemical", 
@@ -14,7 +14,7 @@
   "head_html": "", 
   "hide_footer_signup": 0, 
   "home_page": "chemtech", 
-  "modified": "2016-09-18 14:57:48.276170", 
+  "modified": "2016-10-20 08:47:12.455982", 
   "name": "Website Settings", 
   "robots_txt": null, 
   "subdomain": "chemtech.erpnext.com", 
@@ -24,183 +24,183 @@
     "label": "Product", 
     "parent_label": null, 
     "right": 0, 
-    "target": null, 
-    "url": ""
+    "target": "", 
+    "url": null
    }, 
    {
-    "label": "Industry Chemical", 
+    "label": "Category", 
     "parent_label": "Product", 
     "right": 0, 
-    "target": null, 
-    "url": "/products/industrial"
+    "target": "", 
+    "url": "/index"
    }, 
    {
-    "label": "Water Treatment Chemicals", 
-    "parent_label": "Product", 
-    "right": 0, 
-    "target": null, 
-    "url": "/products/water-treatment-chemicals"
-   }, 
-   {
-    "label": "Swimming Pool Chemicals", 
+    "label": "Brand", 
     "parent_label": "Product", 
     "right": 1, 
     "target": "", 
-    "url": "/products/swimming-pool-chemicals"
+    "url": "/brand"
    }, 
    {
-    "label": "Pest Control", 
+    "label": "All Products", 
     "parent_label": "Product", 
-    "right": 1, 
+    "right": 0, 
     "target": "", 
-    "url": "/products/pest-control"
+    "url": "/allProducts"
    }, 
    {
     "label": "Buying", 
     "parent_label": "", 
     "right": 0, 
     "target": "", 
-    "url": "buying-on-shopchemical"
+    "url": ""
    }, 
    {
-    "label": "Partnership Card", 
-    "parent_label": "", 
+    "label": "Selling", 
+    "parent_label": null, 
     "right": 0, 
     "target": "", 
-    "url": "partnership-card"
+    "url": null
    }, 
    {
     "label": "Contact", 
     "parent_label": null, 
     "right": 1, 
     "target": "", 
-    "url": "contact"
+    "url": ""
    }, 
    {
-    "label": "Select Country", 
-    "parent_label": null, 
+    "label": "Change Country", 
+    "parent_label": "", 
     "right": 1, 
     "target": "", 
     "url": null
    }, 
    {
-    "label": "Bahrain", 
-    "parent_label": "Select Country", 
-    "right": 1, 
-    "target": "", 
-    "url": "http://bh.shopchemical.com/"
-   }, 
-   {
     "label": "India", 
-    "parent_label": "Select Country", 
+    "parent_label": "Change Country", 
     "right": 1, 
     "target": "", 
     "url": "http://in.shopchemical.com/"
    }, 
    {
     "label": "Kuwait", 
-    "parent_label": "Select Country", 
+    "parent_label": "Change Country", 
     "right": 1, 
     "target": "", 
     "url": "http://kw.shopchemical.com/"
    }, 
    {
     "label": "Oman", 
-    "parent_label": "Select Country", 
+    "parent_label": "Change Country", 
     "right": 1, 
     "target": "", 
     "url": "http://om.shopchemical.com/"
    }, 
    {
     "label": "Qatar", 
-    "parent_label": "Select Country", 
+    "parent_label": "Change Country", 
     "right": 1, 
     "target": "", 
     "url": "http://qa.shopchemical.com/"
    }, 
    {
-    "label": "Saudi Arabia", 
-    "parent_label": "Select Country", 
-    "right": 1, 
-    "target": "", 
-    "url": "http://sa.shopchemical.com/"
-   }, 
-   {
     "label": "UAE", 
-    "parent_label": "Select Country", 
+    "parent_label": "Change Country", 
     "right": 1, 
     "target": "", 
     "url": "http://uae.shopchemical.com/"
    }, 
    {
-    "label": "Lab Chemicals", 
-    "parent_label": "Product", 
+    "label": "About Us", 
+    "parent_label": "Contact", 
     "right": 1, 
     "target": "", 
-    "url": "/products/lab-chemicals"
+    "url": null
    }, 
    {
-    "label": "Gases", 
-    "parent_label": "Product", 
+    "label": "Skype", 
+    "parent_label": "Contact", 
     "right": 1, 
     "target": "", 
-    "url": "/products/gases"
+    "url": null
    }, 
    {
-    "label": "Medical", 
-    "parent_label": "Product", 
+    "label": "WhatsApp", 
+    "parent_label": "Contact", 
     "right": 1, 
     "target": "", 
-    "url": "/products/medical"
+    "url": null
    }, 
    {
-    "label": "Services", 
-    "parent_label": "Product", 
+    "label": "Facebook", 
+    "parent_label": "Contact", 
     "right": 1, 
     "target": "", 
-    "url": "/products/services"
+    "url": null
    }, 
    {
-    "label": "Containers", 
-    "parent_label": "Product", 
+    "label": "Register as Buyer", 
+    "parent_label": "Buying", 
     "right": 1, 
     "target": "", 
-    "url": "/products/containers"
+    "url": "/register-as-buyer"
    }, 
    {
-    "label": "Pumps", 
-    "parent_label": "Product", 
+    "label": "Sign IN", 
+    "parent_label": "Buying", 
     "right": 1, 
     "target": "", 
-    "url": "/products/pumps"
+    "url": "/login"
    }, 
    {
-    "label": "Storage", 
-    "parent_label": "Product", 
+    "label": "Create an item", 
+    "parent_label": "Buying", 
     "right": 1, 
     "target": "", 
-    "url": "/products/storage"
+    "url": "buying/create-an-item"
    }, 
    {
-    "label": "Glassware", 
-    "parent_label": "Product", 
+    "label": "Register As Supplier", 
+    "parent_label": "Selling", 
     "right": 1, 
     "target": "", 
-    "url": "/products/glassware"
+    "url": "/supplierregistration"
    }, 
    {
-    "label": "Packing", 
-    "parent_label": "Product", 
+    "label": "Apply Partnership Card", 
+    "parent_label": "Buying", 
     "right": 1, 
     "target": "", 
-    "url": "/products/packing"
+    "url": "/buying/partnership-card"
    }, 
    {
-    "label": "Lab Equipment", 
-    "parent_label": "Product", 
+    "label": "Get Quote", 
+    "parent_label": "Buying", 
     "right": 1, 
     "target": "", 
-    "url": "/products/lab-equipments"
+    "url": "/buying/get-quote"
+   }, 
+   {
+    "label": "Terms and Conditions", 
+    "parent_label": "Buying", 
+    "right": 1, 
+    "target": "", 
+    "url": "/buying/terms-and-conditions"
+   }, 
+   {
+    "label": "Sign In", 
+    "parent_label": "Selling", 
+    "right": 1, 
+    "target": "", 
+    "url": "/login"
+   }, 
+   {
+    "label": "Create an item", 
+    "parent_label": "Selling", 
+    "right": 1, 
+    "target": "", 
+    "url": "selling/create-an-item"
    }
   ], 
   "website_theme": "Standard", 
