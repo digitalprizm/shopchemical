@@ -28,8 +28,8 @@ def get_brand():
 def get_all_product():
     # return  frappe.db.get_list("Item",filters = {"show_in_website": 1},
     # 	fields = ("name", "description", "website_image"))
-	item_list = frappe.db.sql("""select name,item_code,description,website_image from tabItem where show_in_website=1""",as_dict=1)
-	print item_list
+	item_list = frappe.db.sql("""select i.name,i.item_code,i.item_group,i.website_image,i.image,i.thumbnail,
+		ig.route from tabItem i, `tabItem Group` ig where i.show_in_website=1 and i.item_group = ig.name""",as_dict=1)
 	return item_list
 
 
