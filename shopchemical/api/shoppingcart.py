@@ -22,7 +22,7 @@ def ping():
 @frappe.whitelist(allow_guest=True)
 def get_brand():
 	brand_list = frappe.db.sql("""select name,description,brand_image from tabItem where show_in_website=1""",as_dict=1)
-    return  frappe.db.get_list("Brand",fields = ("name", "description", "brand_image"))
+	return  frappe.db.get_list("Brand",fields = ("name", "description", "brand_image"))
 
 @frappe.whitelist(allow_guest=True)
 def get_all_product():
