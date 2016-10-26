@@ -29,9 +29,16 @@ def get_all_product():
     # return  frappe.db.get_list("Item",filters = {"show_in_website": 1},
     # 	fields = ("name", "description", "website_image"))
 	item_list = frappe.db.sql("""select i.name,i.item_code,i.item_group,i.website_image,i.image,i.thumbnail,
-		ig.route from tabItem i, `tabItem Group` ig where i.show_in_website=1 and i.item_group = ig.name""",as_dict=1)
+		i.route as item_route,ig.route as group_route from tabItem i, `tabItem Group` ig where i.show_in_website=1 and i.item_group = ig.name""",as_dict=1)
 	return item_list
 
+@frappe.whitelist(allow_guest=True)
+def get_item_price(item_code):
+	price_list_name = frappe.db.sql("""select value from tabSingles where doctype='Shopping Cart Settings' and field='price_list'""",as_dict=1)
+	price_list_name=price_list_name[0]['value']
+	price_list_rate = frappe.db.sql("""select price_list_rate from `tabItem Price` 
+		where price_list='{0}' and item_code='{1}'""".format(price_list_name,item_code),as_dict=1)
+	return price_list_rate
 
 @frappe.whitelist(allow_guest=True)
 def get_all_product2():
