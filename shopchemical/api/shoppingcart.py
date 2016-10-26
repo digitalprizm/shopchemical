@@ -41,6 +41,12 @@ def get_item_price(item_code):
 	return price_list_rate
 
 @frappe.whitelist(allow_guest=True)
+def get_available_qty(item_code):
+	available_qty = frappe.db.sql("""select item_code,sum(actual_qty) as available_qty,stock_uom from tabBin 
+		where item_code='{0}'""".format(item_code),as_dict=1)
+	return available_qty
+
+@frappe.whitelist(allow_guest=True)
 def get_all_product2():
     return  frappe.db.get_list("Item",filters = {"show_in_website": 1},
     	fields = ("name", "description", "website_image"))
