@@ -11,7 +11,7 @@ app_color = "grey"
 app_email = "kolate.sambhaji@gmail.com"
 app_license = "mit"
 
-fixtures = ['Website Settings','Web Page','Contact Us Settings']
+fixtures = ['Website Settings','Web Page','Contact Us Settings','Website Script']
 
 # Includes in <head>
 # ------------------

@@ -1,7 +1,7 @@
 [
  {
   "address": "<div class=\"row\">\n    <div class=\"col-xs-2 text-center\"></div>\n    <div class=\"col-xs-3 text-center\">\n         <h2><b>\n        <img alt=\"Smiley face\" height=\"15%\" src=\"http://shopchemical.com/files/skype.png\" width=\"15%\"> \n         <a>shopchemical</a> <br>\n    </b></h2>\n\n    </div>\n    <div class=\"col-xs-4 text-center\">\n         <h2><b>\n\n        <img alt=\"Smiley face\" height=\"15%\" src=\"http://shopchemical.com/files/whatsapp.png\" width=\"15%\">\n\n        <a>00919846462200 <br></a> \n            </b></h2>\n\n    </div>\n    <div class=\"col-xs-3 text-center\">\n         <h2><b>\n\n            <a href=\"https://www.facebook.com/chemtechQatar\" rel=\"nofollow\" target=\"_blank\">\n            <img alt=\"Smiley face\" height=\"30%\" src=\"http://shopchemical.com/files/fb.png\" width=\"30%\"> \n\n            </a>\n            </b></h2>\n\n    </div>\n</div>                          ", 
-  "banner_html": "<div class=\"row\">\n    <div class=\"col-md-3\">\n        <a href=\"/\"><img src=\"/files/shopchemical_banner-cropfff543.png\" style=\"max-width: 80%;\"></a>\n    </div>\n    <div class=\"col-md-6\"></div>\n    <div class=\"col-md-3\">\n        <a href=\"/\"><img src=\"/files/shopchemical.png\" style=\"max-width: 80%;visibility:hidden\"></a>\n    </div>\n<div>\n\n\n<style>\n.product-image-wrapper {\n   width: 14vw!important;\n}\n\n.product-text {font-size:11px}\n.navbar-default {\n  background-color: #f5f7fa;\n  border-color: #ebeff2;\n}\n.footer-links{\n  display:none; \n}\n\n.getQuote{\n    margin-left: 100px;\n    margin-top: -54px;\n}\n\n.item-msds {\n    margin-top: -5px;\n    margin-left: 30px;\n}\n</style>\n", 
+  "banner_html": "<div class=\"row\">\n    <div class=\"col-md-3\">\n        <a href=\"/\"><img src=\"/files/shopchemical_banner-cropfff543.png\" style=\"max-width: 80%;\"></a>\n    </div>\n    <div class=\"col-md-6\"></div>\n    <div class=\"col-md-3\">\n        <a href=\"/\"><img src=\"/files/shopchemical.png\" style=\"max-width: 80%;visibility:hidden\"></a>\n    </div>\n<div>\n\n\n<style>\n.product-text {font-size:11px}\n.navbar-default {\n  background-color: #f5f7fa;\n  border-color: #ebeff2;\n}\n.footer-links{\n  display:none; \n}\n.item-msds {\n    margin-top: -5px;\n    margin-left: 30px;\n}\n\n.item-search-input {\n   width: 88%!important;\n}\n\n</style>\n", 
   "banner_image": null, 
   "brand_html": "", 
   "copyright": "Shopchemical", 
@@ -14,7 +14,7 @@
   "head_html": "", 
   "hide_footer_signup": 0, 
   "home_page": "chemtech", 
-  "modified": "2016-10-20 08:47:12.455982", 
+  "modified": "2016-11-04 12:06:21.678158", 
   "name": "Website Settings", 
   "robots_txt": null, 
   "subdomain": "chemtech.erpnext.com", 
@@ -112,32 +112,39 @@
     "url": "http://uae.shopchemical.com/"
    }, 
    {
+    "label": "Saudi Arabia", 
+    "parent_label": "Change Country", 
+    "right": 1, 
+    "target": "", 
+    "url": "http://sa.shopchemical.com/"
+   }, 
+   {
     "label": "About Us", 
     "parent_label": "Contact", 
     "right": 1, 
     "target": "", 
-    "url": null
+    "url": "/contact/aboutus"
    }, 
    {
     "label": "Skype", 
     "parent_label": "Contact", 
     "right": 1, 
     "target": "", 
-    "url": null
+    "url": "/contact/skype"
    }, 
    {
     "label": "WhatsApp", 
     "parent_label": "Contact", 
     "right": 1, 
     "target": "", 
-    "url": null
+    "url": "/contact/whatsapp"
    }, 
    {
     "label": "Facebook", 
     "parent_label": "Contact", 
     "right": 1, 
     "target": "", 
-    "url": null
+    "url": "/contact/facebook"
    }, 
    {
     "label": "Register as Buyer", 
