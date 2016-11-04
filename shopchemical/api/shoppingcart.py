@@ -29,7 +29,7 @@ def get_all_product():
     # return  frappe.db.get_list("Item",filters = {"show_in_website": 1},
     # 	fields = ("name", "description", "website_image"))
 	item_list = frappe.db.sql("""select i.name,i.item_code,i.item_group,i.website_image,i.image,i.thumbnail,
-		i.route as item_route,ig.route as group_route from tabItem i, `tabItem Group` ig where i.show_in_website=1 and i.item_group = ig.name""",as_dict=1)
+		i.route as item_route,ig.route as group_route,i.show_get_quote from tabItem i, `tabItem Group` ig where i.show_in_website=1 and i.item_group = ig.name""",as_dict=1)
 	return item_list
 
 @frappe.whitelist(allow_guest=True)
