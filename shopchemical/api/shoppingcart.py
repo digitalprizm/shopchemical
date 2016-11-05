@@ -29,7 +29,21 @@ def get_all_product():
     # return  frappe.db.get_list("Item",filters = {"show_in_website": 1},
     # 	fields = ("name", "description", "website_image"))
 	item_list = frappe.db.sql("""select i.name,i.item_code,i.item_group,i.website_image,i.image,i.thumbnail,
-		i.route as item_route,ig.route as group_route,i.show_get_quote,i.msds from tabItem i, `tabItem Group` ig where i.show_in_website=1 and i.item_group = ig.name""",as_dict=1)
+		i.route as item_route,ig.route as group_route,i.show_get_quote,i.msds,i.brand from tabItem i, `tabItem Group` ig where i.show_in_website=1 and i.item_group = ig.name""",as_dict=1)
+	return item_list
+
+@frappe.whitelist(allow_guest=True)
+def get_brandwise_item(brand):
+	item_list = frappe.db.sql("""select name,item_code,item_group,website_image,image,thumbnail,
+		route as item_route,show_get_quote,msds,brand from tabItem where show_in_website=1 and 
+		brand='{0}'""".format(brand),as_dict=1)
+	return item_list
+
+@frappe.whitelist(allow_guest=True)
+def get_item_detail(item_code):
+	item_list = frappe.db.sql("""select name,item_code,item_group,website_image,image,thumbnail,
+		route as item_route,show_get_quote,msds,brand from tabItem where show_in_website=1 and 
+		item_code='{0}'""".format(item_code),as_dict=1)
 	return item_list
 
 @frappe.whitelist(allow_guest=True)
