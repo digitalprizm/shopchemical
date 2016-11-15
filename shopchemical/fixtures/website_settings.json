@@ -14,7 +14,7 @@
   "head_html": "", 
   "hide_footer_signup": 0, 
   "home_page": "chemtech", 
-  "modified": "2016-11-04 12:06:21.678158", 
+  "modified": "2016-11-05 09:20:02.488480", 
   "name": "Website Settings", 
   "robots_txt": null, 
   "subdomain": "chemtech.erpnext.com", 
@@ -126,25 +126,11 @@
     "url": "/contact/aboutus"
    }, 
    {
-    "label": "Skype", 
+    "label": "Contact Us", 
     "parent_label": "Contact", 
     "right": 1, 
     "target": "", 
-    "url": "/contact/skype"
-   }, 
-   {
-    "label": "WhatsApp", 
-    "parent_label": "Contact", 
-    "right": 1, 
-    "target": "", 
-    "url": "/contact/whatsapp"
-   }, 
-   {
-    "label": "Facebook", 
-    "parent_label": "Contact", 
-    "right": 1, 
-    "target": "", 
-    "url": "/contact/facebook"
+    "url": "contact/contactUs"
    }, 
    {
     "label": "Register as Buyer", 

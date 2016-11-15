@@ -42,8 +42,7 @@ def get_brandwise_item(brand):
 @frappe.whitelist(allow_guest=True)
 def get_item_detail(item_code):
 	item_list = frappe.db.sql("""select name,item_code,item_group,website_image,image,thumbnail,
-		route as item_route,show_get_quote,msds,brand from tabItem where show_in_website=1 and 
-		item_code='{0}'""".format(item_code),as_dict=1)
+		route as item_route,show_get_quote,msds,brand from tabItem where item_code='{0}'""".format(item_code),as_dict=1)
 	return item_list
 
 @frappe.whitelist(allow_guest=True)
