@@ -1,7 +1,7 @@
 [
  {
   "address": "<div class=\"row\">\n    <div class=\"col-xs-2 text-center\"></div>\n    <div class=\"col-xs-3 text-center\">\n         <h2><b>\n        <img alt=\"Smiley face\" height=\"15%\" src=\"http://shopchemical.com/files/skype.png\" width=\"15%\"> \n         <a>shopchemical</a> <br>\n    </b></h2>\n\n    </div>\n    <div class=\"col-xs-4 text-center\">\n         <h2><b>\n\n        <img alt=\"Smiley face\" height=\"15%\" src=\"http://shopchemical.com/files/whatsapp.png\" width=\"15%\">\n\n        <a>00919846462200 <br></a> \n            </b></h2>\n\n    </div>\n    <div class=\"col-xs-3 text-center\">\n         <h2><b>\n\n            <a href=\"https://www.facebook.com/chemtechQatar\" rel=\"nofollow\" target=\"_blank\">\n            <img alt=\"Smiley face\" height=\"30%\" src=\"http://shopchemical.com/files/fb.png\" width=\"30%\"> \n\n            </a>\n            </b></h2>\n\n    </div>\n</div>                          ", 
-  "banner_html": "<div class=\"row\">\n    <div class=\"col-md-3\">\n        <a href=\"/\"><img src=\"/files/shopchemical_banner-cropfff543.png\" style=\"max-width: 80%;\"></a>\n    </div>\n    <div class=\"col-md-6\"></div>\n    <div class=\"col-md-3\">\n        <a href=\"/\"><img src=\"/files/shopchemical.png\" style=\"max-width: 80%;visibility:hidden\"></a>\n    </div>\n<div>\n\n\n<style>\n.product-text {font-size:11px}\n.navbar-default {\n  background-color: #f5f7fa;\n  border-color: #ebeff2;\n}\n.footer-links{\n  display:none; \n}\n.item-msds {\n    margin-top: -5px;\n    margin-left: 30px;\n}\n\n.item-search-input {\n   width: 88%!important;\n}\n\n</style>\n", 
+  "banner_html": "<div class=\"row\">\n    <div class=\"col-md-3\">\n        <a href=\"/\"><img src=\"/files/shopchemical_banner-cropfff543.png\" style=\"max-width: 80%;\"></a>\n    </div>\n    <div class=\"col-md-6\"></div>\n    <div class=\"col-md-3\">\n        <a href=\"/\"><img src=\"/files/shopchemical.png\" style=\"max-width: 80%;visibility:hidden\"></a>\n    </div>\n<div>\n\n\n<style>\n.product-text {font-size:11px}\n.navbar-default {\n  background-color: #f5f7fa;\n  border-color: #ebeff2;\n}\n.footer-links{\n  display:none; \n}\n.item-msds {\n    margin-top: -5px;\n    margin-left: 30px;\n}\n\n.item-search-input {\n   width: 88%!important;\n}\n\n.item-website-description {\n  display: none;\n}\n</style>\n", 
   "banner_image": null, 
   "brand_html": "", 
   "copyright": "Shopchemical", 
@@ -13,8 +13,8 @@
   "google_analytics_id": null, 
   "head_html": "", 
   "hide_footer_signup": 0, 
-  "home_page": "chemtech", 
-  "modified": "2016-11-05 09:20:02.488480", 
+  "home_page": "allProducts", 
+  "modified": "2016-12-31 12:19:48.604469", 
   "name": "Website Settings", 
   "robots_txt": null, 
   "subdomain": "chemtech.erpnext.com", 
@@ -54,13 +54,6 @@
     "right": 0, 
     "target": "", 
     "url": ""
-   }, 
-   {
-    "label": "Selling", 
-    "parent_label": null, 
-    "right": 0, 
-    "target": "", 
-    "url": null
    }, 
    {
     "label": "Contact", 
@@ -119,13 +112,6 @@
     "url": "http://sa.shopchemical.com/"
    }, 
    {
-    "label": "About Us", 
-    "parent_label": "Contact", 
-    "right": 1, 
-    "target": "", 
-    "url": "/contact/aboutus"
-   }, 
-   {
     "label": "Contact Us", 
     "parent_label": "Contact", 
     "right": 1, 
@@ -154,13 +140,6 @@
     "url": "buying/create-an-item"
    }, 
    {
-    "label": "Register As Supplier", 
-    "parent_label": "Selling", 
-    "right": 1, 
-    "target": "", 
-    "url": "/supplierregistration"
-   }, 
-   {
     "label": "Apply Partnership Card", 
     "parent_label": "Buying", 
     "right": 1, 
@@ -180,20 +159,6 @@
     "right": 1, 
     "target": "", 
     "url": "/buying/terms-and-conditions"
-   }, 
-   {
-    "label": "Sign In", 
-    "parent_label": "Selling", 
-    "right": 1, 
-    "target": "", 
-    "url": "/login"
-   }, 
-   {
-    "label": "Create an item", 
-    "parent_label": "Selling", 
-    "right": 1, 
-    "target": "", 
-    "url": "selling/create-an-item"
    }
   ], 
   "website_theme": "Standard", 
