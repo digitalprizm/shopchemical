@@ -1,0 +1,5 @@
+{
+	"js/shopchemical-web.min.js": [
+		"public/js/addcart.js"
+	]
+}

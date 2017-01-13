@@ -23,6 +23,7 @@ fixtures = ['Website Settings','Web Page','Contact Us Settings','Website Script'
 # include js, css files in header of web template
 # web_include_css = "/assets/shopchemical/css/shopchemical.css"
 # web_include_js = "/assets/shopchemical/js/shopchemical.js"
+web_include_js = "/assets/js/shopchemical-web.min.js"
 
 # Home Pages
 # ----------
