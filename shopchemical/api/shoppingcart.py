@@ -34,13 +34,19 @@ def all_product():
 	# 	where price_list='{0}' and item_code='{1}'""".format(price_list_name,item_code),as_dict=1)
 
 	item_list = frappe.db.sql("""select i.name,i.item_code,i.item_group,i.website_image,i.image,i.thumbnail,
-		i.route as item_route,ig.route as group_route,i.show_get_quote,i.msds,i.brand,
+		i.route as item_route,ig.route as group_route,i.show_get_quote,i.msds,i.brand, i.stock_uom,
 		case 
 			WHEN 1 = 1 THEN 
-				(select price_list_rate from `tabItem Price` where price_list='{0}' and item_code='i.item_code')
+				(select price_list_rate from `tabItem Price` where price_list='{0}' and item_code=i.item_code)
 		else
 			""
-		END AS price_list_rate
+		END AS price_list_rate,
+		CASE
+			WHEN 1=1 THEN
+			(select sum(actual_qty) as available_qty from tabBin where item_code=i.item_code)
+		else
+			""
+		END AS available_qty
 		 from tabItem i, `tabItem Group` ig where i.show_in_website=1 and i.item_group = ig.name""".format(price_list_name),as_dict=1)
 	
 	print "\n\n\nHiiiiiiiii"
