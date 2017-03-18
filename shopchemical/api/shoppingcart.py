@@ -25,6 +25,11 @@ def get_brand():
 	return  brand_list
 
 @frappe.whitelist(allow_guest=True)
+def get_category():
+	category_list = frappe.db.sql("""select name,description,category_image,priority from tabCategory order by priority""",as_dict=1)
+	return category_list
+
+@frappe.whitelist(allow_guest=True)
 def all_product():
 	# return  frappe.db.get_list("Item",filters = {"show_in_website": 1},
 	# 	fields = ("name", "description", "website_image"))
