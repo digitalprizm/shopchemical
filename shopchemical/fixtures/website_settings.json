@@ -1,7 +1,7 @@
 [
  {
   "address": "<div class=\"row\">\n    <div class=\"col-xs-2 text-center\"></div>\n    <div class=\"col-xs-3 text-center\">\n         <h2><b>\n        <img alt=\"Smiley face\" height=\"15%\" src=\"http://shopchemical.com/files/skype.png\" width=\"15%\"> \n         <a>shopchemical</a> <br>\n    </b></h2>\n\n    </div>\n    <div class=\"col-xs-4 text-center\">\n         <h2><b>\n\n        <img alt=\"Smiley face\" height=\"15%\" src=\"http://shopchemical.com/files/whatsapp.png\" width=\"15%\">\n\n        <a>00919846462200 <br></a> \n            </b></h2>\n\n    </div>\n    <div class=\"col-xs-3 text-center\">\n         <h2><b>\n\n            <a href=\"https://www.facebook.com/chemtechQatar\" rel=\"nofollow\" target=\"_blank\">\n            <img alt=\"Smiley face\" height=\"30%\" src=\"http://shopchemical.com/files/fb.png\" width=\"30%\"> \n\n            </a>\n            </b></h2>\n\n    </div>\n</div>                          ", 
-  "banner_html": "<div class=\"row\">\n    <div class=\"col-md-3\">\n        <a href=\"/\"><img src=\"/files/shopchemical_banner-cropfff543.png\" style=\"max-width: 100%; width:100% !important\"></a>\n    </div>\n    <div class=\"col-md-6\"></div>\n    <div class=\"col-md-3\">\n        <a href=\"/\"><img src=\"/files/shopchemical.png\" style=\"max-width: 100%;visibility:hidden\"></a>\n    </div>\n<div>\n\n\n<style>\n.product-text {font-size:11px}\n.navbar-default {\n  background-color: #f5f7fa;\n  border-color: #ebeff2;\n}\n.footer-links{\n  display:none; \n}\n.item-msds {\n    margin-top: -5px;\n    margin-left: 30px;\n}\n\n.item-search-input {\n   width: 88%!important;\n}\n\n.item-website-description {\n  display: none;\n}\n</style>\n", 
+  "banner_html": "\n<div class=\"row\">\n    <div class=\"col-md-3 col-xs-6\">\n        <a href=\"/\"><img src=\"/files/shopchemical_banner-cropfff543.png\" style=\"max-width:250px; width:100% !important\"></a>\n    </div>\n    <div class=\"col-md-6 col-xs-0\"></div>\n    <div class=\"col-md-3 col-xs-6\">\n        <a href=\"/\"><img src=\"/files/C1ZkJ4i.png\" style=\"max-width: 100%\"></a>\n    </div>\n<div>\n\n\n<style>\n.product-text {font-size:11px}\n.navbar-default {\n  background-color: #f5f7fa;\n  border-color: #ebeff2;\n}\n.footer-links{\n  display:none; \n}\n.item-msds {\n    margin-top: -5px;\n    margin-left: 30px;\n}\n\n.item-search-input {\n   width: 88%!important;\n}\n\n.item-website-description {\n  display: none;\n}\n</style>", 
   "banner_image": null, 
   "brand_html": "", 
   "copyright": "Shopchemical", 
@@ -13,8 +13,8 @@
   "google_analytics_id": null, 
   "head_html": "", 
   "hide_footer_signup": 0, 
-  "home_page": "categorylist", 
-  "modified": "2017-03-19 14:38:52.620039", 
+  "home_page": "welcome-page", 
+  "modified": "2017-04-05 12:38:45.074015", 
   "name": "Website Settings", 
   "robots_txt": null, 
   "subdomain": "chemtech.erpnext.com", 
@@ -25,28 +25,21 @@
     "parent_label": null, 
     "right": 0, 
     "target": "", 
-    "url": null
-   }, 
-   {
-    "label": "Category", 
-    "parent_label": "Product", 
-    "right": 0, 
-    "target": "", 
-    "url": "/index"
+    "url": "/welcome-page"
    }, 
    {
     "label": "Brand", 
-    "parent_label": "Product", 
-    "right": 1, 
-    "target": "", 
-    "url": "/brand"
-   }, 
-   {
-    "label": "All Products", 
-    "parent_label": "Product", 
+    "parent_label": null, 
     "right": 0, 
     "target": "", 
-    "url": "/allProducts"
+    "url": "/welcome-page"
+   }, 
+   {
+    "label": "Country", 
+    "parent_label": null, 
+    "right": 0, 
+    "target": "", 
+    "url": "/welcome-page"
    }, 
    {
     "label": "Buying", 
@@ -56,11 +49,11 @@
     "url": ""
    }, 
    {
-    "label": "Contact", 
-    "parent_label": null, 
+    "label": "Contact Us", 
+    "parent_label": "", 
     "right": 1, 
     "target": "", 
-    "url": ""
+    "url": "contact/contactUs"
    }, 
    {
     "label": "Change Country", 
@@ -75,13 +68,6 @@
     "right": 1, 
     "target": "", 
     "url": "http://in.shopchemical.com/"
-   }, 
-   {
-    "label": "Kuwait", 
-    "parent_label": "Change Country", 
-    "right": 1, 
-    "target": "", 
-    "url": "http://kw.shopchemical.com/"
    }, 
    {
     "label": "Oman", 
@@ -103,20 +89,6 @@
     "right": 1, 
     "target": "", 
     "url": "http://uae.shopchemical.com/"
-   }, 
-   {
-    "label": "Saudi Arabia", 
-    "parent_label": "Change Country", 
-    "right": 1, 
-    "target": "", 
-    "url": "http://sa.shopchemical.com/"
-   }, 
-   {
-    "label": "Contact Us", 
-    "parent_label": "Contact", 
-    "right": 1, 
-    "target": "", 
-    "url": "contact/contactUs"
    }, 
    {
     "label": "Register as Buyer", 
