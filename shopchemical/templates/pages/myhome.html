@@ -1,0 +1,63 @@
+shochemical
+<br>
+{% extends "templates/web.html" %}
+
+{% block title %} {{ _("Product Search") }} {% endblock %}
+
+{% block header %}<h2>{{ _("Product Search") }}</h2>{% endblock %}
+
+{% block page_content %}
+<script>{% include "templates/includes/schome.js" %}</script>
+
+<script>
+frappe.ready(function() {
+	var txt = get_url_arg("search");
+	$(".search-results").html("{{ _('Search results for') }}: " + txt);
+	window.search = txt;
+	window.start = 0;
+	window.get_product_list();
+});
+</script>
+
+
+<br>
+
+
+	<div class="page-container" id="page-Products">
+	    <div class="page-content">
+	        <div class="page-content-wrapper">
+	            <div class="row">
+	                <div class="col-sm-8">
+	                    <div class="page-breadcrumbs"></div>
+	                    <div class="page-header-block"></div>
+	                </div>
+	                <div class="col-sm-4 col-xs-6">
+	                </div>
+	            </div>
+	            <div class="page-content-block">
+	                <div class="item-group-content">
+	                    <div class="row">
+	                         <h3><u></u></h3>
+	                        <div id="category-list"></div>
+	                    </div>
+	                    <hr>
+	                    <div class="row" id="brand-list">
+	                         <h3><u>Brands</u></h3>
+	                        <div></div>
+	                    </div>
+	                    <hr>
+	                    <div class="row">
+	                         <h3><u>Countries</u></h3>
+	                        <div id="country-list"></div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div>
+	            <p class="text-center" style="margin-bottom: 50px;"> <a class="btn btn-success" href="/allProducts" rel="nofollow">Explore Products <i class="icon-chevron-right"></i></a>
+
+	            </p>
+	        </div>
+	    </div>
+	</div>
+{% endblock %}

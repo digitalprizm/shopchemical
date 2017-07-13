@@ -1,0 +1,272 @@
+Hello123sssss123
+<br>
+
+
+<style type="text/css">
+	h1, p {
+	    margin: 0;
+	    padding: 0 0 .5em;
+	}
+
+	.font-color{color:#7ece32;font-weight:bolder;}
+	.container-main {
+	    /*margin: 0 auto;*/
+	    max-width: 480px;
+	}
+
+	/*
+	 * Caption component
+	 */
+	.caption {
+	    position: relative;
+	    overflow: hidden;
+
+	    /* Only the -webkit- prefix is required these days */
+	    -webkit-transform: translateZ(0);
+	            transform: translateZ(0);
+	    margin: 8px;
+	}
+
+	.caption::before {
+	    content: ' ';
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    background: transparent;
+	    transition: background .35s ease-out;
+	}
+
+	.caption:hover::before {
+	    background: rgba(0, 0, 0, .5);
+	}
+
+	.caption__media {
+	    display: block;
+	    min-width: 100%;
+	    max-width: 100%;
+	    height: 30vh;
+	}
+
+	.caption__overlay {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    padding: 10px;
+	    color: white;
+
+	    -webkit-transform: translateY(100%);
+	            transform: translateY(100%);
+
+	    transition: -webkit-transform .35s ease-out;
+	    transition:         transform .35s ease-out;
+	}
+
+	.caption:hover .caption__overlay {
+	    -webkit-transform: translateY(0);
+	            transform: translateY(0);
+	}
+
+	.caption__overlay__title {
+	    -webkit-transform: translateY( -webkit-calc(-100% - 10px) );
+	            transform: translateY( calc(-100% - 10px) );
+
+	    transition: -webkit-transform .35s ease-out;
+	    transition:         transform .35s ease-out;
+	}
+
+	.caption:hover .caption__overlay__title {
+	    -webkit-transform: translateY(0);
+	            transform: translateY(0);
+	}
+
+	.text-center {display:none;}
+
+	.page-content {
+	    padding: 0!important;
+	}
+</style>
+<script>
+frappe.ready(function() {
+   $.ajax({
+      type: 'GET',
+      url: "/api/method/shopchemical.api.shoppingcart.get_category",
+      success: function(data) 
+	      {
+	        $.each(data, function () {
+	           $.each(this, function (i, value) {
+	                var image=""
+	                if (value.category_image == "" || value.category_image == null) {
+	                    image = "/files/no-image-box.png";
+	                }
+	                else
+	                {
+	                    image = value.category_image;
+	                }
+
+	                $('#category-list').append('<div class="col-md-3 col-sm-6 col-xs-6">'+
+	                '<div class="container-main">'+
+	                	'<a class="thumbnail" href="/allcategories?cat='+value.name+'" rel="nofollow" style="box-shadow: 0px 1px 5px 0px #404040;">'+
+					    '<article class="caption">'+
+					        '<img class="caption__media" src="'+image+'" />'+
+					        '<div class="caption__overlay">'+
+					            '<h1 class="caption__overlay__title font-color">'+value.name+'</h1>'+ '</div>'+
+					    '</article>'+
+					    '</a>'+
+					'</div></div>');
+	            });
+	        });
+
+	    }
+	}); //category
+
+	$.ajax({
+      type: 'GET',
+      url: "/api/method/shopchemical.api.shoppingcart.get_brand",
+      success: function(data) 
+      {
+        
+        $.each(data, function () {
+           $.each(this, function (i, value) {
+                var image=""
+                if (value.brand_image == "" || value.brand_image == null) {
+                    image = "/files/no-image-box.png";
+                }
+                else
+                {
+                    image = value.brand_image;
+                }
+
+                $('#brand-list').append('<div class="col-md-3 col-sm-6 col-xs-6">'+
+                '<div class="container-main">'+
+                	 '<a class="thumbnail" href="/brandlist?cat='+value.name+'" rel="nofollow" style="box-shadow: 0px 1px 5px 0px #404040;">'+
+				    '<article class="caption">'+
+				        '<img class="caption__media" src="'+image+'" />'+
+				        '<div class="caption__overlay">'+
+				            '<h1 class="caption__overlay__title font-color">'+value.name+'</h1>'+ '</div>'+
+				    '</article>'+
+				    '</a>'+
+				'</div></div>');
+            });
+        });
+
+	    }
+	});//brand
+
+	//var countries = ["India", "Kuwait", "Oman", "Qatar", "UAE", "Saudi Arabia"];
+	var countries = [
+		{"name":"UAE" , "flag":"http://uaeflag.facts.co/UAEFlagImage.png" , "url":"http://uae.shopchemical.com/"},
+		{"name":"Oman" , "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Oman.svg/1280px-Flag_of_Oman.svg.png" , "url":"http://om.shopchemical.com/"},
+		{"name":"Qatar" , "flag":"http://cdn.nexternal.com/boyles/images/Qatar.jpg" , "url":"http://qa.shopchemical.com/"},
+		{"name":"India" , "flag":"https://s-media-cache-ak0.pinimg.com/originals/1c/50/5f/1c505fe9b39698142c243607e06236f5.jpg" , "url":"http://in.shopchemical.com/"},
+		// {"name":"Kuwait" , "flag":"http://www.suaopiniao1.com.br/photos/2016/04/fqgLP_8462_108670e12c6e0fcf4d959fc8d2eabef6.png" , "url":"http://kw.shopchemical.com/"},
+		//{"name":"Saudi Arabia" , "flag":"https://www.onlinestores.com/flagdetective/images/download/saudi-arabia-hi.jpg" , "url":"http://sa.shopchemical.com/"}
+	];
+	$.each(countries, function (i, value) {
+		$('#country-list').append('<div class="col-md-3 col-sm-6 col-xs-6">'+
+        '<div class="container-main">'+
+        	'<a class="thumbnail" href="'+value.url+'" rel="nofollow" style="box-shadow: 0px 1px 5px 0px #404040;">'+
+		    '<article class="caption">'+
+		        '<img class="caption__media" src="'+value.flag+'" />'+
+		        '<div class="caption__overlay">'+
+		            '<h1 class="caption__overlay__title font-color">'+value.name+'</h1>'+ '</div>'+
+		    '</article>'+
+		    '</a>'+
+		'</div></div>');
+	}); //country
+
+});
+</script>
+<div class="page-container" id="page-Products">
+    <div class="page-content">
+        <div class="page-content-wrapper">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="page-breadcrumbs"></div>
+
+
+                    <div class="page-header-block"></div>
+
+
+                </div>
+
+
+                <div class="col-sm-4 col-xs-6">
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="page-content-block">
+                <div class="item-group-content">
+                    <div class="row">
+                         <h3><u>
+
+                         
+                         </u></h3>
+
+
+
+                        <div id="category-list"></div>
+
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <div class="row" id="brand-list">
+                         <h3><u>Brands</u></h3>
+
+
+
+                        <div></div>
+
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <div class="row">
+                         <h3><u>Countries</u></h3>
+
+
+
+                        <div id="country-list"></div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div>
+            <p class="text-center" style="margin-bottom: 50px;"> <a class="btn btn-success" href="/allProducts" rel="nofollow">Explore Products <i class="icon-chevron-right"></i></a>
+
+            </p>
+
+
+        </div>
+
+
+        
+    </div>
+
+
+</div>

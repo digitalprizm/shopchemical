@@ -1,0 +1,48 @@
+{% from "erpnext/templates/includes/macros.html" import product_image_square %}
+
+<a class="product-link product-list-link" href="{{ item_route|abs_url }}">
+	<div class='row'>
+<!-- 		<div class='col-xs-3 col-sm-2 product-image-wrapper'>
+			{{ product_image_square(thumbnail or website_image) }}
+		</div> -->
+		<div class='col-xs-9 col-sm-10 text-left'>
+
+<!-- <div class="row"> -->
+	<div class="col-sm-3">Product Name {{ item_name }}</div>
+	<div class="col-sm-2">	
+		{% if brand  %}
+			{{ brand }}
+		{% endif %}
+	</div>
+	<div class="col-sm-3 text-right">
+		{{ available_qty or "-" }}
+		{% if available_qty  %}
+			 {{ stock_uom or "" }}
+		{% endif %}
+	</div>
+	<div class="col-sm-2">{{ delivery_time or "-"}}</div>
+
+
+	<div class="col-sm-2 	">
+		{% if show_get_quote  %}
+			<button class="btn btn-warning btn-sm getQuote center-block" data-get-itemcode="{{ item_code }}">Get Quote</button>
+		{% else%}
+			{{ price_list_rate or "-"}}
+
+		{% endif %}
+		
+
+	</div>
+<!-- </div> -->
+<!-- 			<div class="ellipsis product-text strong">{{ item_name }}</div>
+			{% set website_description = website_description or description %} Brnddd
+			{% if website_description != item_name %}
+				<div class="ellipsis text-muted">{{ website_description or description }} Brand 
+
+				</div>
+			{% elif item_code != item_name %}
+				<div class="ellipsis text-muted">{{ _('Item Code') }}: {{ item_code }} Brand</div>
+			{% endif %} -->
+		</div>
+	</div>
+</a>
