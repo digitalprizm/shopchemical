@@ -25,7 +25,7 @@ def validate_share(doc,method):
 	if not doc.get("__islocal") :	
 		customer_owner = frappe.db.get_value("Customer",doc.customer,"owner")	
 		if doc.owner != customer_owner:
-			frappe.share.add(doc.doctype, doc.name, customer_owner,write=1)
+			frappe.share.add(doc.doctype, doc.name, customer_owner,write=1,flags={"ignore_share_permission": True})
 
 @frappe.whitelist()
 def add_interaction(doc):
