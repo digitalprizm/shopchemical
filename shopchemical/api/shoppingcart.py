@@ -21,7 +21,10 @@ def ping():
 
 @frappe.whitelist(allow_guest=True)
 def get_brand():
-	brand_list = frappe.db.sql("""select name,description,brand_image from tabBrand""",as_dict=1)
+	brand_list = frappe.db.sql("""select name,description,
+		brand_image,priority 
+		from tabBrand
+		order by priority""",as_dict=1)
 	return  brand_list
 
 @frappe.whitelist(allow_guest=True)
