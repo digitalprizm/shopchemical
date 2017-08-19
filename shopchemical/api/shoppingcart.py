@@ -23,13 +23,17 @@ def ping():
 def get_brand():
 	brand_list = frappe.db.sql("""select name,description,
 		brand_image,priority 
-		from tabBrand
+		from tabBrand 
+		where disabled = 0
 		order by priority""",as_dict=1)
 	return  brand_list
 
 @frappe.whitelist(allow_guest=True)
 def get_category():
-	category_list = frappe.db.sql("""select name,description,category_image,priority from tabCategory order by priority""",as_dict=1)
+	category_list = frappe.db.sql("""select name,description,category_image,priority 
+		from tabCategory 
+		where disabled = 0
+		order by priority""",as_dict=1)
 	return category_list
 
 @frappe.whitelist(allow_guest=True)

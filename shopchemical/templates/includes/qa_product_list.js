@@ -17,6 +17,7 @@ window.get_product_list = function() {
 			cmd: "shopchemical.templates.pages.shopchemical_search.get_product_list",
 			start: window.start,
 			search: window.search,
+			item_group: get_url_arg("item_group"),
 			product_group: window.product_group
 		},
 		dataType: "json",

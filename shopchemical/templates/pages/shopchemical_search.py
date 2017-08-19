@@ -45,7 +45,7 @@ def all_product():
 
 
 @frappe.whitelist(allow_guest=True)
-def get_product_list(search=None, start=0, limit=12):
+def get_product_list(search=None, start=0, limit=12, item_group=None):
 	# limit = 12 because we show 12 items in the grid view
 
 	# base query
@@ -75,7 +75,29 @@ def get_product_list(search=None, start=0, limit=12):
 			 and i.item_group = ig.name desc limit '{1}', '{2}'""".format(price_list_name,start, limit)
 	
 	# search term condition
-	if search:
+	if search and item_group:
+		query = """select i.name as item_name,i.item_code,i.item_group,i.website_image,i.image,i.thumbnail,
+			i.route as item_route, REPLACE(delivery_time,0,'-') AS delivery_time,ig.route as group_route,i.show_get_quote,i.msds,i.brand, i.stock_uom,
+			case 
+				WHEN 1 = 1 THEN 
+					(select FORMAT(price_list_rate,2) from `tabItem Price` where price_list='{0}' and item_code=i.item_code)
+			else
+				""
+			END AS price_list_rate,
+			CASE
+				WHEN 1=1 THEN
+				(select FORMAT(sum(actual_qty),2) as available_qty from tabBin where item_code=i.item_code)
+			else
+				""
+			END AS available_qty
+			 from tabItem i, `tabItem Group` ig 
+			where i.show_in_website=1 
+			and i.item_group = '{2}'
+			and i.item_group = ig.name and (i.item_name like '%{1}%' or i.name like '%{1}%' or i.description like '%{1}%')""".format(price_list_name, search, item_group)
+
+	print item_group,"asdadsa\n\n"
+	print "\n\n\n\n\nssdfdsmmmmmmm"
+	if search and not item_group:
 		query = """select i.name as item_name,i.item_code,i.item_group,i.website_image,i.image,i.thumbnail,
 			i.route as item_route, REPLACE(delivery_time,0,'-') AS delivery_time,ig.route as group_route,i.show_get_quote,i.msds,i.brand, i.stock_uom,
 			case 
@@ -92,6 +114,7 @@ def get_product_list(search=None, start=0, limit=12):
 			END AS available_qty
 			 from tabItem i, `tabItem Group` ig where i.show_in_website=1 
 			 and i.item_group = ig.name and (i.item_name like '%{1}%' or i.name like '%{1}%' or i.description like '%{1}%')""".format(price_list_name, search)
+
 		# query += """ and (web_long_description like '{0}'
 		# 		or description like '{0}'
 		# 		or item_name like '{0}'
