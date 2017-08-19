@@ -8,18 +8,20 @@ window.get_product_list = function() {
 
 	if(window.start==undefined) {
 		throw "product list not initialized (no start)"
-	}
+	};
+	   	
 	$.ajax({
 		method: "GET",
 		url: "/",
 		dataType: "json",
 		data: {
-			cmd: "shopchemical.templates.pages.shopchemical_search.get_product_list",
-			start: window.start,
-			search: window.search,
-			item_group: get_url_arg("item_group"),
-			product_group: window.product_group
-		},
+				cmd: "shopchemical.templates.pages.shopchemical_search.get_product_list",
+				start: window.start,
+				search: window.search,
+				item_group: window.item_group,
+				brand: window.brand,
+				product_group: window.product_group
+			},
 		dataType: "json",
 		success: function(data) {
 			window.render_product_list(data.message || []);

@@ -45,18 +45,22 @@ def all_product():
 
 
 @frappe.whitelist(allow_guest=True)
-def get_product_list(search=None, start=0, limit=12, item_group=None):
+def get_product_list(search=None, start=0, limit=12, brand=None,item_group=None):
 	# limit = 12 because we show 12 items in the grid view
 
-	# base query
-	# query = """select name, item_name, item_code, route, website_image, thumbnail, item_group,
-	# 		description, web_long_description as website_description, brand
-	# 	from `tabItem`
-	# 	where (show_in_website = 1 or show_variant_in_website = 1)
-	# 		and disabled=0
-	# 		and (end_of_life is null or end_of_life='0000-00-00' or end_of_life > %(today)s)"""
 	price_list_name = frappe.db.sql("""select value from tabSingles where doctype='Shopping Cart Settings' and field='price_list'""",as_dict=1)
 	price_list_name=price_list_name[0]['value']		
+	custom_condition = ""
+	custom_condition += "where i.show_in_website=1 "
+	if item_group:
+		custom_condition += "and i.item_group = '{0}' ".format(item_group)
+	
+	if brand:
+		custom_condition += "and i.brand = '{0}' ".format(brand)
+	
+	custom_condition += " and i.item_group = ig.name"
+	custom_condition += " and (i.item_name like '%{0}%' or i.name like '%{0}%' or i.description like '%{0}%')".format(search)
+
 	query = """select i.name as item_name,i.item_code,i.item_group,i.website_image,i.image,i.thumbnail,
 			i.route as item_route, REPLACE(delivery_time,0,'-') AS delivery_time,ig.route as group_route,i.show_get_quote,i.msds,i.brand, i.stock_uom,
 			case 
@@ -71,60 +75,10 @@ def get_product_list(search=None, start=0, limit=12, item_group=None):
 			else
 				""
 			END AS available_qty
-			 from tabItem i, `tabItem Group` ig where i.show_in_website=1 
-			 and i.item_group = ig.name desc limit '{1}', '{2}'""".format(price_list_name,start, limit)
+			from tabItem i, `tabItem Group` ig 
+			{3} order by item_code desc limit {1}, {2}""".format(price_list_name,start, limit,custom_condition)
 	
-	# search term condition
-	if search and item_group:
-		query = """select i.name as item_name,i.item_code,i.item_group,i.website_image,i.image,i.thumbnail,
-			i.route as item_route, REPLACE(delivery_time,0,'-') AS delivery_time,ig.route as group_route,i.show_get_quote,i.msds,i.brand, i.stock_uom,
-			case 
-				WHEN 1 = 1 THEN 
-					(select FORMAT(price_list_rate,2) from `tabItem Price` where price_list='{0}' and item_code=i.item_code)
-			else
-				""
-			END AS price_list_rate,
-			CASE
-				WHEN 1=1 THEN
-				(select FORMAT(sum(actual_qty),2) as available_qty from tabBin where item_code=i.item_code)
-			else
-				""
-			END AS available_qty
-			 from tabItem i, `tabItem Group` ig 
-			where i.show_in_website=1 
-			and i.item_group = '{2}'
-			and i.item_group = ig.name and (i.item_name like '%{1}%' or i.name like '%{1}%' or i.description like '%{1}%')""".format(price_list_name, search, item_group)
-
-	print item_group,"asdadsa\n\n"
-	print "\n\n\n\n\nssdfdsmmmmmmm"
-	if search and not item_group:
-		query = """select i.name as item_name,i.item_code,i.item_group,i.website_image,i.image,i.thumbnail,
-			i.route as item_route, REPLACE(delivery_time,0,'-') AS delivery_time,ig.route as group_route,i.show_get_quote,i.msds,i.brand, i.stock_uom,
-			case 
-				WHEN 1 = 1 THEN 
-					(select FORMAT(price_list_rate,2) from `tabItem Price` where price_list='{0}' and item_code=i.item_code)
-			else
-				""
-			END AS price_list_rate,
-			CASE
-				WHEN 1=1 THEN
-				(select FORMAT(sum(actual_qty),2) as available_qty from tabBin where item_code=i.item_code)
-			else
-				""
-			END AS available_qty
-			 from tabItem i, `tabItem Group` ig where i.show_in_website=1 
-			 and i.item_group = ig.name and (i.item_name like '%{1}%' or i.name like '%{1}%' or i.description like '%{1}%')""".format(price_list_name, search)
-
-		# query += """ and (web_long_description like '{0}'
-		# 		or description like '{0}'
-		# 		or item_name like '{0}'
-		# 		or name like '{0}')""".format(search)
-		# search = "%" + cstr(search) + "%"
-	data = frappe.db.sql(query, as_dict=1,debug=1)
-	# frappe.msgprint("hi")
-	# order by
-	# query += """ order by weightage desc, idx desc, modified desc limit %s, %s""" % (start, limit)
-	# print "\n\n\nnnn",query
+	data = frappe.db.sql(query, as_dict=1)
 
 	# data = frappe.db.sql(query, {
 	# 	"search": search,
