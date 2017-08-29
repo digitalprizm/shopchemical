@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from . import __version__ as app_version
+from frappe import _
 
 app_name = "shopchemical"
 app_title = "shopchemical"
@@ -36,6 +37,20 @@ web_include_js = "/assets/js/shopchemical-web.min.js"
 #	"Role": "home_page"
 # }
 
+
+standard_portal_menu_items = [
+	{"title": _("Get Quote"), "route": "/get_quote", "reference_doctype": "Get Quote", "role":"Customer"},
+]
+
+# website_route_rules = [
+# 	{"from_route": "/get_quote", "to_route": "Get Quote"},
+# 	{"from_route": "/get_quote/<path:name>", "to_route": "get_quote",
+# 		"defaults": {
+# 			"doctype": "Get Quote",
+# 			"parents": [{"title": _("Get Quote"), "name": "get_quote"}]
+# 		}
+# 	},
+# ]
 # Website user home page (by function)
 # get_website_user_home_page = "shopchemical.utils.get_home_page"
 

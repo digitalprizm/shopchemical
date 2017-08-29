@@ -19,6 +19,31 @@ from frappe.model.naming import get_default_naming_series
 class GetQuote(Document):
 	pass
 
+def get_project_list(doctype, txt, filters, limit_start, limit_page_length=20, order_by="modified"):
+	return frappe.db.sql('''select distinct get_quote.*
+		from `tabGet Quote` get_quote
+		where
+			get_quote.owner = %(user)s
+			order by get_quote.modified desc
+			limit {0}, {1}
+		'''.format(limit_start, limit_page_length),
+			{'user':frappe.session.user},
+			as_dict=True,
+			update={'doctype':'Get Quote'},debug=1)
+
+def get_list_context(context=None):
+	from erpnext.controllers.website_list_for_contact import get_list_context
+	list_context = get_list_context(context)
+	list_context.update({
+		'show_sidebar': True,
+		'show_search': False,
+		'no_breadcrumbs': True,
+		'title': _('Get Quote'),
+		"get_list": get_project_list,
+		"row_template": "templates/includes/get_quote_row.html",
+	})
+
+	return list_context
 
 
 
