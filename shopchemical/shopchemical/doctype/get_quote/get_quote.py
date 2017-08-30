@@ -58,25 +58,37 @@ def create_quote(source_name, target_doc=None):
 		# company_additional_info = frappe.db.get_value("Company",{"company_name":source.company},"additional_info")
 		# customer_name = frappe.db.get_value("Customer",{"customer_name":source.surgeon},"customer_name")
 		# print customer_name
-
-		email_id = source.email_id
+		item_description = frappe.db.get_value("Item",source.item_name,"description")
+		stock_uom = frappe.db.get_value("Item",source.item_name,"stock_uom")
+		price_list_name = frappe.db.sql("""select value from tabSingles where doctype='Shopping Cart Settings' and field='price_list'""",as_dict=1)
+		price_list_name=price_list_name[0]['value']
+		item_price = frappe.db.get_value("Item Price", {"price_list": price_list_name,
+			"item_code": source.item_name})
+		email_id = source.owner
 		real_name, email_id = parseaddr(email_id)
 
-		if frappe.db.get_value("Lead", {"email_id": email_id}):
-			lead = frappe.db.get_value("Lead", {"email_id": email_id})
-		else: 
-			lead = frappe.get_doc({
-				"doctype": "Lead",
-				"phone": source.contact_number,
-				"email_id": source.email_id,
-				"lead_name": real_name or source.email_id,
-				"status": "Lead",
-				"naming_series": get_default_naming_series("Lead"),
-				"company": frappe.db.get_default("Company"),
-				"source": "Website"
-			})
-			lead.insert()
-			lead = lead.name
+		customer_contact = frappe.db.get_value("Contact",{ "email_id":source.owner},"name")
+
+		customer_name = frappe.db.sql("""select link_name 
+			from `tabDynamic Link` 
+			where link_doctype="Customer" and parenttype="Contact" 
+			and parent='{0}' limit 1""".format(customer_contact),as_list=1)
+
+		# if frappe.db.get_value("Lead", {"email_id": email_id}):
+		# 	lead = frappe.db.get_value("Lead", {"email_id": email_id})
+		# else: 
+		# 	lead = frappe.get_doc({
+		# 		"doctype": "Lead",
+		# 		"phone": source.contact_number,
+		# 		"email_id": source.owner,
+		# 		"lead_name": real_name or source.owner,
+		# 		"status": "Lead",
+		# 		"naming_series": get_default_naming_series("Lead"),
+		# 		"company": frappe.db.get_default("Company"),
+		# 		"source": "Website"
+		# 	})
+		# 	lead.insert()
+		# 	lead = lead.name
 
 		# if source.is_surgeon_billable==1:
 		# 	target.customer = source.surgeon
@@ -90,8 +102,8 @@ def create_quote(source_name, target_doc=None):
 		# target.case = source.name
 		# target.patient_case_no=source.case_no
 		target.company = company_name
-		target.quotation_to = "Lead"
-		target.lead = lead
+		target.quotation_to = "Customer"
+		target.customer = customer_name[0][0]
 		target.due_date = today()
 		target.set('items', [])
 		k = target.append('items', {})
@@ -104,9 +116,13 @@ def create_quote(source_name, target_doc=None):
 		# k.additional_info = company_additional_info
 		k.uom = "Nos"
 		k.conversion_factor = 1
-		k.stock_uom = "Nos"
+		if stock_uom: 
+			k.stock_uom = stock_uom
+		else:
+			k.stock_uom = "Nos"
 		k.qty = 1
-		# k.rate = source.rate
+		k.description = item_description
+		k.rate = item_price
 		target.get_quote = source.name
 		
 	doclist = get_mapped_doc("Get Quote", source_name, {
