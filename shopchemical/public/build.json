@@ -1,5 +1,11 @@
 {
+	"css/shopchemical-web.css": [
+		"public/js/dataTables.bootstrap.min.css"
+	],
 	"js/shopchemical-web.min.js": [
-		"public/js/addcart.js"
+		"public/js/addcart.js",
+		"public/js/dataTables.bootstrap.min.js",
+		"public/js/jquery-1.12.4.js",
+		"public/js/jquery.dataTables.min.js",
 	]
 }

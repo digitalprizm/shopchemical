@@ -1,5 +1,4 @@
 {% extends "templates/web.html" %}
-<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
 
 {% block title %} {{ _("Product Search") }} {% endblock %}
 
@@ -11,14 +10,12 @@
 <script>
 frappe.ready(function() {
 	var txt = get_url_arg("search");
-	$(".item-search").hide();
 	$(".search-results").html("{{ _('Product Search results for') }}: " + encodeURIComponent(txt));
 	window.search = txt;
 	window.start = 0;
 	window.item_group = get_url_arg("item_group");
 	window.brand = get_url_arg("brand");
 	window.get_product_list();
-
 });
 
 </script>
@@ -26,22 +23,14 @@ frappe.ready(function() {
 
 
 <div class="product-search-content">
-	<div class="row">
-		<div class="col-sm-5">	
-			<i>Search using Product Name, Item Group, Brand or Price.</i></p>
-		</div>
-		<div class="col-sm-7 text-right">
-			<a class="" href="/shopchemical_search">
-				<u>Click here to search in All Item</u>
-			</a>
-		</div>
-	</div>
-    <!-- <h3 class="search-results">{{ _("Search Results") }}</h3> -->
-<!-- 
+
+    <h3 class="search-results">{{ _("Search Results") }}</h3>
+
 		<table class="table"><a class="product-link product-list-link" href="/products/industrial/acetone-ind-grade-200-litres-drum">
 		<div class="row">
 			<a class="product-link product-list-link" href="">
 		<div class="row">
+			<!-- <div class="col-xs-9 col-sm-10 text-left"> -->
 		<div class="col-sm-2">Product Name</div>
 		<div class="col-sm-2">	
 			Brand
@@ -56,8 +45,9 @@ frappe.ready(function() {
 		<div class="col-sm-2">
 			Price
 		</div>
+			<!-- </div> -->
 		</div>
-	</a></table> -->
+	</a></table>
 
 
 	<div id="search-list" class="row">

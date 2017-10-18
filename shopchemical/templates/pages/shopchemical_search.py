@@ -76,7 +76,7 @@ def get_product_list(search=None, start=0, limit=12, brand=None,item_group=None)
 				""
 			END AS available_qty
 			from tabItem i, `tabItem Group` ig 
-			{3} order by item_code desc limit {1}, {2}""".format(price_list_name,start, limit,custom_condition)
+			{1} order by item_code desc""".format(price_list_name,custom_condition)
 	
 	data = frappe.db.sql(query, as_dict=1)
 
@@ -124,6 +124,6 @@ def cs_get_item_for_list_in_html(context):
 
 	# products_template = 'templates/includes/products_as_grid.html'
 	# if cint(frappe.db.get_single_value('Products Settings', 'products_as_list')):
-	products_template = 'templates/includes/qa_product_as_list.html'
+	products_template = 'templates/includes/qa_product_as_list_table.html'
 
 	return frappe.get_template(products_template).render(context)

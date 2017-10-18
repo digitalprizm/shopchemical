@@ -1,0 +1,32 @@
+{% from "erpnext/templates/includes/macros.html" import product_image_square %}
+
+<tr>
+	<td style="width: 30%;">Product Name {{ item_name }}</td>
+	<td style="width: 15%;">	
+		{% if brand  %}
+			{{ brand }}
+		{% endif %}
+	</td>
+	<td style="width: 15%;">	
+		{% if item_group  %}
+			{{ item_group }}
+		{% endif %}
+	</td>
+	<td style="width: 20%;">
+		{{ available_qty or "-" }}
+		{% if available_qty  %}
+			 {{ stock_uom or "" }}
+		{% endif %}
+	</td>
+	<!-- <td style="width: 15%;">{{ delivery_time or "-"}}</td> -->
+	<td style="width: 20%;" class="text-right">
+		{% if show_get_quote  %}
+			<button class="btn btn-warning btn-sm getQuote center-block" data-get-itemcode="{{ item_code }}">Get Quote</button>
+		{% else%}
+			{{ price_list_rate or "-"}}
+
+		{% endif %}
+		
+
+	</td>
+</tr>
