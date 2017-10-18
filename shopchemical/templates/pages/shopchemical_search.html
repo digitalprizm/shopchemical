@@ -1,9 +1,9 @@
 {% extends "templates/web.html" %}
 <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
 
-{% block title %} {{ _("Product Search") }} {% endblock %}
+<!-- {% block title %} {{ _("Product Search") }} {% endblock %} -->
 
-{% block header %}<h2>{{ _("Product Search") }}</h2>{% endblock %}
+{% block header %}<h2>{{ _("") }}</h2>{% endblock %}
 
 {% block page_content %}
 <script>{% include "templates/includes/qa_product_list.js" %}</script>
@@ -17,6 +17,12 @@ div.dataTables_filter input {
 thead tr th{ 
 	background-color: #70a340 !important;
 	color: White !important; 
+}
+#example_length{
+	display: none;
+}
+div.dataTables_filter {
+    text-align: left !important;
 }
 </style>
 <script>
