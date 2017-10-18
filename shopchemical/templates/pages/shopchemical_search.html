@@ -7,7 +7,18 @@
 
 {% block page_content %}
 <script>{% include "templates/includes/qa_product_list.js" %}</script>
-
+<style>
+div.dataTables_filter input {
+    margin-left: 0.5em;
+    display: inline-block;
+    width: 350px !important;
+    border-color: #70a340 !important;
+}
+thead tr th{ 
+	background-color: #70a340 !important;
+	color: White !important; 
+}
+</style>
 <script>
 frappe.ready(function() {
 	var txt = get_url_arg("search");
@@ -29,11 +40,6 @@ frappe.ready(function() {
 	<div class="row">
 		<div class="col-sm-5">	
 			<i>Search using Product Name, Item Group, Brand or Price.</i></p>
-		</div>
-		<div class="col-sm-7 text-right">
-			<a class="" href="/shopchemical_search">
-				<u>Click here to search in All Item</u>
-			</a>
 		</div>
 	</div>
     <!-- <h3 class="search-results">{{ _("Search Results") }}</h3> -->

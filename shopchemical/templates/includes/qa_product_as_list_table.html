@@ -1,7 +1,12 @@
 {% from "erpnext/templates/includes/macros.html" import product_image_square %}
 
+
 <tr>
-	<td style="width: 30%;">Product Name {{ item_name }}</td>
+	<td style="width: 30%;" class="text-left">
+		<a class="" href="{{ item_route|abs_url }}">
+				{{ item_name }} 
+		</a>
+	</td>
 	<td style="width: 15%;">	
 		{% if brand  %}
 			{{ brand }}
@@ -30,3 +35,4 @@
 
 	</td>
 </tr>
+</a>

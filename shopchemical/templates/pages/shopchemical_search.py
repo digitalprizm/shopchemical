@@ -47,7 +47,7 @@ def all_product():
 @frappe.whitelist(allow_guest=True)
 def get_product_list(search=None, start=0, limit=12, brand=None,item_group=None):
 	# limit = 12 because we show 12 items in the grid view
-
+	search = "%"
 	price_list_name = frappe.db.sql("""select value from tabSingles where doctype='Shopping Cart Settings' and field='price_list'""",as_dict=1)
 	price_list_name=price_list_name[0]['value']		
 	custom_condition = ""
@@ -78,7 +78,7 @@ def get_product_list(search=None, start=0, limit=12, brand=None,item_group=None)
 			from tabItem i, `tabItem Group` ig 
 			{1} order by item_code desc""".format(price_list_name,custom_condition)
 	
-	data = frappe.db.sql(query, as_dict=1)
+	data = frappe.db.sql(query, as_dict=1, debug=True)
 
 	# data = frappe.db.sql(query, {
 	# 	"search": search,
