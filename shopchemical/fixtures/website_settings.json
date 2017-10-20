@@ -1,7 +1,7 @@
 [
  {
   "address": "<div class=\"row\">\n    <div class=\"col-xs-2 text-center\"></div>\n    <div class=\"col-xs-3 text-center\">\n         <h2><b>\n        <img alt=\"Smiley face\" height=\"15%\" src=\"http://shopchemical.com/files/skype.png\" width=\"15%\"> \n         <a>shopchemical</a> <br>\n    </b></h2>\n\n    </div>\n    <div class=\"col-xs-4 text-center\">\n         <h2><b>\n\n        <img alt=\"Smiley face\" height=\"15%\" src=\"http://shopchemical.com/files/whatsapp.png\" width=\"15%\">\n\n        <a>00919846462200 <br></a> \n            </b></h2>\n\n    </div>\n    <div class=\"col-xs-3 text-center\">\n         <h2><b>\n\n            <a href=\"https://www.facebook.com/chemtechQatar\" rel=\"nofollow\" target=\"_blank\">\n            <img alt=\"Smiley face\" height=\"30%\" src=\"http://shopchemical.com/files/fb.png\" width=\"30%\"> \n\n            </a>\n            </b></h2>\n\n    </div>\n</div>                          ", 
-  "banner_html": "   <a href=\"/\" style=\"float:left; margin-left:8%;\"><img src=\"files/imgpsh_fullsize.png\"></a>\n    <a href=\"/\" style=\"float:right; margin-right:8%;\"><img src=\"/files/C1ZkJ4i.png\" style=\"max-width: 100%\"></a>\n\n\n<style>\n.product-text {font-size:11px}\n.navbar-default {\n  background-color: #f5f7fa;\n  border-color: #ebeff2;\n}\n.item-search {\n    border-bottom: 1px solid #70a340!important;\n    width: 55%!important;\n}\n.footer-links{\n  display:none; \n}\n.item-msds {\n    margin-top: -5px;\n    margin-left: 30px;\n}\n\n.item-search-input {\n   width: 88%!important;\n}\n.item-search i{\n    margin-right: 0px!important;\n    margin-top: 0px!important;\n}\n\n.item-website-description {\n  display: none;\n}\n\n.navbar-right{\n  margin-right: 0px!important;\n  padding-right: 24px!important; \n}\n.navbar-default {\n    padding-top: 0px!important;\n    padding-bottom: 0px!important;\n}\n.item8-group-content {\n   margin-top: 0px!important;\n}\n.banner {\n    background: white;\n    position: fixed;\n    z-index: 3;\n    width: 100%;\n   left: 0;\n}\n.navbar {\n    position: fixed;\n    z-index: 3;\n    top: 63px;\n    width: 100%;\n}\n.page-container {\n    margin-top: 75px!important;\n}\n.page-content.col-sm-12 {\n    padding-top: 50px!important;\n}\n/*.row.page-head{\n    display: none;\n}*/\n#page-welcome-page.page-container{\n    margin-top: 0px!important;\n}\n</style>", 
+  "banner_html": "<script>\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');\n\n  ga('create', 'UA-104267170-1', 'auto');\n  ga('send', 'pageview');\n\n</script>\n   <a href=\"/\" style=\"float:left; margin-left:8%;\"><img src=\"files/imgpsh_fullsize.png\"></a>\n    <a href=\"/\" style=\"float:right; margin-right:8%;\"><img src=\"/files/C1ZkJ4i.png\" style=\"max-width: 100%\"></a>\n\n\n<style>\n.product-text {font-size:11px}\n.navbar-default {\n  background-color: #f5f7fa;\n  border-color: #ebeff2;\n}\n.item-search {\n    border-bottom: 1px solid #70a340!important;\n    width: 55%!important;\n}\n.footer-links{\n  display:none; \n}\n.item-msds {\n    margin-top: -5px;\n    margin-left: 30px;\n}\n\n.item-search-input {\n   width: 88%!important;\n}\n.item-search i{\n    margin-right: 0px!important;\n    margin-top: 0px!important;\n}\n\n\n\n.navbar-right{\n  margin-right: 0px!important;\n  padding-right: 24px!important; \n}\n.navbar-default {\n    padding-top: 0px!important;\n    padding-bottom: 0px!important;\n}\n.item8-group-content {\n   margin-top: 0px!important;\n}\n.banner {\n    background: white;\n    position: fixed;\n    z-index: 3;\n    width: 100%;\n   left: 0;\n}\n.navbar {\n    position: fixed;\n    z-index: 3;\n    top: 63px;\n    width: 100%;\n}\n.page-container {\n    margin-top: 75px!important;\n}\n.page-content.col-sm-12 {\n    padding-top: 50px!important;\n}\n/*.row.page-head{\n    display: none;\n}*/\n#page-welcome-page.page-container{\n    margin-top: 0px!important;\n}\n#page-Products{\nmargin-top: 50px !important;\n}\n</style>", 
   "banner_image": null, 
   "brand_html": "", 
   "copyright": "Shopchemical", 
@@ -10,11 +10,11 @@
   "doctype": "Website Settings", 
   "favicon": "/files/shopchem_fc.png", 
   "footer_items": [], 
-  "google_analytics_id": null, 
+  "google_analytics_id": "UA-104267170-1", 
   "head_html": "", 
   "hide_footer_signup": 0, 
   "home_page": "welcome-page", 
-  "modified": "2017-07-19 18:13:30.787862", 
+  "modified": "2017-09-19 12:12:28.396275", 
   "name": "Website Settings", 
   "navbar_search": 0, 
   "robots_txt": null, 
@@ -36,16 +36,9 @@
     "url": "/welcome-page"
    }, 
    {
-    "label": "Country", 
-    "parent_label": null, 
-    "right": 0, 
-    "target": "", 
-    "url": "/welcome-page"
-   }, 
-   {
     "label": "Register", 
     "parent_label": "", 
-    "right": 0, 
+    "right": 1, 
     "target": "", 
     "url": ""
    }, 
@@ -55,41 +48,6 @@
     "right": 1, 
     "target": "", 
     "url": "contact/contactUs"
-   }, 
-   {
-    "label": "Change Country", 
-    "parent_label": "", 
-    "right": 1, 
-    "target": "", 
-    "url": null
-   }, 
-   {
-    "label": "India", 
-    "parent_label": "Change Country", 
-    "right": 1, 
-    "target": "", 
-    "url": "http://in.shopchemical.com/"
-   }, 
-   {
-    "label": "Oman", 
-    "parent_label": "Change Country", 
-    "right": 1, 
-    "target": "", 
-    "url": "http://om.shopchemical.com/"
-   }, 
-   {
-    "label": "Qatar", 
-    "parent_label": "Change Country", 
-    "right": 1, 
-    "target": "", 
-    "url": "http://qa.shopchemical.com/"
-   }, 
-   {
-    "label": "UAE", 
-    "parent_label": "Change Country", 
-    "right": 1, 
-    "target": "", 
-    "url": "http://uae.shopchemical.com/"
    }, 
    {
     "label": "Register as Buyer", 
