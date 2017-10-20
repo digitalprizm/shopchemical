@@ -31,8 +31,15 @@ window.get_product_list = function() {
 
 				  	 $('#example').DataTable({
 						"iDisplayLength": 100,
-				  	 	"oSearch": {"sSearch": get_url_arg("search")}
+				  	 	"oSearch": {"sSearch": get_url_arg("search")},
+				  	 	"oLanguage": { "sSearch": "" } 
 				  	 });
+
+					setTimeout(function(){ 
+						$('input[aria-controls="example"]').attr("placeholder", "  Product Name, Brand, Item Group");
+						$('#example_filter').append('<img src="/assets/shopchemical/images/magnifier.png" style=" height: 25px; margin-left: 10px; ">')
+
+					},100);
 	             	 // $('input[aria-controls="example"]').val("hcl")
 
 				});
