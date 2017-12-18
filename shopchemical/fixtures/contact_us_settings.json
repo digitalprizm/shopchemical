@@ -7,13 +7,16 @@
   "country": null, 
   "docstatus": 0, 
   "doctype": "Contact Us Settings", 
+  "email_id": null, 
   "forward_to_email": null, 
   "heading": null, 
   "introduction": null, 
   "modified": "2015-07-11 08:24:33.372020", 
   "name": "Contact Us Settings", 
+  "phone": null, 
   "pincode": null, 
   "query_options": null, 
+  "skype": null, 
   "state": null
  }
 ]
