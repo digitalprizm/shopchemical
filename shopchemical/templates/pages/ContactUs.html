@@ -34,34 +34,33 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
-  console.log("test1")
-  //var getCountryPath = window.location.host.split(".")[0];
-  var getCountryPath="";
-  if(getCountryPath == "in"){
-    
-      $("li").removeClass("active");
-      $("li > a[href='#india']").parent().addClass("active");
-      $("#india").addClass("active"); 
-    }
-    if(getCountryPath == "qa"){
-      $("li").removeClass("active");
-      $("li > a[href='#qatar']").parent().addClass("active");
-      $("#qatar").addClass("active");
-    }
-    if(getCountryPath == "om"){
-      $("li").removeClass("active");
-      $("li > a[href='#oman']").parent().addClass("active");
-      $("#oman").addClass("active");
-    }
-    if(getCountryPath == "uae"){
-      $("li").removeClass("active");
-      $("li > a[href='#uae']").parent().addClass("active");
-      $("#uae").addClass("active");
-    }
-    var hide = function (elem) {
-    elem.classList.remove('is-visible');
-};
-});
+          var getCountryPath = window.location.host.split(".")[0];
+          /*var getCountryPath="";*/
+          if(getCountryPath == "in"){
+            
+              $("li").removeClass("active");
+              $("li > a[href='#india']").parent().addClass("active");
+              $("#india").addClass("active"); 
+            }
+            if(getCountryPath == "qa"){
+              $("li").removeClass("active");
+              $("li > a[href='#qatar']").parent().addClass("active");
+              $("#qatar").addClass("active");
+            }
+            if(getCountryPath == "om"){
+              $("li").removeClass("active");
+              $("li > a[href='#oman']").parent().addClass("active");
+              $("#oman").addClass("active");
+            }
+            if(getCountryPath == "uae"){
+              $("li").removeClass("active");
+              $("li > a[href='#uae']").parent().addClass("active");
+              $("#uae").addClass("active");
+            }
+            var hide = function (elem) {
+            elem.classList.remove('is-visible');
+        };
+    });
   </script>
 <div class="row" style="min-height:300px;">
     
