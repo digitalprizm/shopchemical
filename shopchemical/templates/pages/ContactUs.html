@@ -19,6 +19,7 @@
   border-bottom-color: #ddd;
   border-right-color: transparent;
   background-color: #4CAF50;
+  color: #ffffff;
 }
 .tabs-left>li>a {
   border-radius: 4px 0 0 4px;
@@ -41,21 +42,25 @@
               $("li").removeClass("active");
               $("li > a[href='#india']").parent().addClass("active");
               $("#india").addClass("active"); 
+              $("#india").trigger("click");
             }
             if(getCountryPath == "qa"){
               $("li").removeClass("active");
               $("li > a[href='#qatar']").parent().addClass("active");
               $("#qatar").addClass("active");
+              $("#qatar").trigger("click");
             }
             if(getCountryPath == "om"){
               $("li").removeClass("active");
               $("li > a[href='#oman']").parent().addClass("active");
               $("#oman").addClass("active");
+              $("#oman").trigger("click");
             }
             if(getCountryPath == "uae"){
               $("li").removeClass("active");
               $("li > a[href='#uae']").parent().addClass("active");
               $("#uae").addClass("active");
+              $("#uae").trigger("click");
             }
             var hide = function (elem) {
             elem.classList.remove('is-visible');
