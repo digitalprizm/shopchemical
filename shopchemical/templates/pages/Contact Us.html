@@ -1,0 +1,180 @@
+<style type="text/css">
+.tabs-left, .tabs-right {
+  border-bottom: none;
+  padding-top: 2px;
+}
+.tabs-left {
+  border-right: 1px solid #ddd;
+}
+.tabs-left>li, .tabs-right>li {
+  float: none;
+  margin-bottom: 2px;
+}
+.tabs-left>li {
+  margin-right: -1px;
+}
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+  background-color: #4CAF50;
+}
+.tabs-left>li>a {
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  display:block;
+}
+</style>
+<title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+  console.log("test1")
+  //var getCountryPath = window.location.host.split(".")[0];
+  var getCountryPath="om";
+  if(getCountryPath == "in"){
+    
+      $("li").removeClass("active");
+      $("li > a[href='#india']").parent().addClass("active");
+      $("#india").addClass("active"); 
+    }
+    if(getCountryPath == "qa"){
+      $("li").removeClass("active");
+      $("li > a[href='#qatar']").parent().addClass("active");
+      $("#qatar").addClass("active");
+    }
+    if(getCountryPath == "om"){
+      $("li").removeClass("active");
+      $("li > a[href='#oman']").parent().addClass("active");
+      $("#oman").addClass("active");
+    }
+    if(getCountryPath == "uae"){
+      $("li").removeClass("active");
+      $("li > a[href='#uae']").parent().addClass("active");
+      $("#uae").addClass("active");
+    }
+    var hide = function (elem) {
+    elem.classList.remove('is-visible');
+};
+});
+  </script>
+<div class="row" style="min-height:300px;">
+    
+        <h3>Contact Us</h3>
+        <hr/>
+        <div class="col-xs-2">
+            <ul class="nav nav-tabs tabs-left">
+                <li class="active"><a href="#all" data-toggle="tab">All</a></li>
+                <li><a href="#qatar" data-toggle="tab">Qatar</a></li>
+                <li><a href="#india" data-toggle="tab">India</a></li>
+                <li><a href="#oman" data-toggle="tab">Oman</a></li>
+                <li><a href="#uae" data-toggle="tab">UAE</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-10">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane " id="all">
+                    <div class="container">
+
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Qatar</h3>
+                      <p>ChemTech <br>
+                        12, Aziziya Commercial Building, <br>
+                            Al Azizya, <br>
+                        Doha<br>
+
+                <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel://00974. 44 65 1234">00974. 44 65 1234</a>
+    </div>
+    <div id="1" class="col-sm-6">
+       <h3>India</h3>
+                      <p>
+                ChemTech <br>
+                310, Nehru Palace Building, <br>
+                Bank junction, <br>
+                Aluva, <br>
+                Kerala<br>
+
+                <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel://0484 2985555">0484 29855554</a> </p> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Oman</h3>
+                    <p>ChemTech- MPES LLC <br>
+                    Plot No. 24, <br>
+                    Block No. 252, <br>
+                    Steet No.61, Ghala Industrial Area, <br>
+                    Muscat<br>
+                    <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel://968 2450 3385">968 2450 3385</a>
+                    </p>
+    </div>
+    <div class="col-sm-6">
+        <h3>UAE</h3>
+                    <p>ChemTech <br>
+                        21-10, Aspin Tower, <br>
+                        Sheikh Zayed Road, <br>
+                        Dubai<br>
+
+                        <i class="fa fa-phone" aria-hidden="true"></i><a href="tel://00971.4.269 0770">00971.4.269 0770</a> 
+                    </p>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+ <div class="tab-pane" id="qatar">
+                    
+                    <h3>Qatar</h3>
+                      <p>ChemTech <br>
+                        12, Aziziya Commercial Building, <br>
+                            Al Azizya, <br>
+                        Doha<br>
+
+                <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel://00974. 44 65 1234">00974. 44 65 1234</a>
+                </div>
+<div class="tab-pane" id="india">
+                          <h3>India</h3>
+                      <p>
+                ChemTech <br>
+                310, Nehru Palace Building, <br>
+                Bank junction, <br>
+                Aluva, <br>
+                Kerala<br>
+
+                <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel://0484 2985555">0484 29855554</a> </p>
+                </div>
+                <div class="tab-pane" id="oman">
+                    <h3>Oman</h3>
+                    <p>ChemTech- MPES LLC <br>
+                    Plot No. 24, <br>
+                    Block No. 252, <br>
+                    Steet No.61, Ghala Industrial Area, <br>
+                    Muscat<br>
+                    <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel://968 2450 3385">968 2450 3385</a>
+                    </p>
+                </div>
+                <div class="tab-pane" id="uae">
+                    <h3>UAE</h3>
+                    <p>ChemTech <br>
+                        21-10, Aspin Tower, <br>
+                        Sheikh Zayed Road, <br>
+                        Dubai<br>
+
+                        <i class="fa fa-phone" aria-hidden="true"></i><a href="tel://00971.4.269 0770">00971.4.269 0770</a> 
+                    </p>
+                </div>
+                <div id="display" style="height: 50px; width: 100%;"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    
