@@ -19,6 +19,7 @@
   border-bottom-color: #ddd;
   border-right-color: transparent;
   background-color: #4CAF50;
+  color: #ffffff;
 }
 .tabs-left>li>a {
   border-radius: 4px 0 0 4px;
@@ -37,34 +38,37 @@ a:hover{
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
-  console.log("test1")
-  //var getCountryPath = window.location.host.split(".")[0];
-  var getCountryPath="";
-  if(getCountryPath == "in"){
-    
-      $("li").removeClass("active");
-      $("li > a[href='#india']").parent().addClass("active");
-      $("#india").addClass("active"); 
-    }
-    if(getCountryPath == "qa"){
-      $("li").removeClass("active");
-      $("li > a[href='#qatar']").parent().addClass("active");
-      $("#qatar").addClass("active");
-    }
-    if(getCountryPath == "om"){
-      $("li").removeClass("active");
-      $("li > a[href='#oman']").parent().addClass("active");
-      $("#oman").addClass("active");
-    }
-    if(getCountryPath == "uae"){
-      $("li").removeClass("active");
-      $("li > a[href='#uae']").parent().addClass("active");
-      $("#uae").addClass("active");
-    }
-    var hide = function (elem) {
-    elem.classList.remove('is-visible');
-};
-});
+          var getCountryPath = window.location.host.split(".")[0];
+          /*var getCountryPath="";*/
+          if(getCountryPath == "in"){
+            
+              $("li").removeClass("active");
+              $("li > a[href='#india']").parent().addClass("active");
+              $("#india").addClass("active"); 
+              $("#india").trigger("click");
+            }
+            if(getCountryPath == "qa"){
+              $("li").removeClass("active");
+              $("li > a[href='#qatar']").parent().addClass("active");
+              $("#qatar").addClass("active");
+              $("#qatar").trigger("click");
+            }
+            if(getCountryPath == "om"){
+              $("li").removeClass("active");
+              $("li > a[href='#oman']").parent().addClass("active");
+              $("#oman").addClass("active");
+              $("#oman").trigger("click");
+            }
+            if(getCountryPath == "uae"){
+              $("li").removeClass("active");
+              $("li > a[href='#uae']").parent().addClass("active");
+              $("#uae").addClass("active");
+              $("#uae").trigger("click");
+            }
+            var hide = function (elem) {
+            elem.classList.remove('is-visible');
+        };
+    });
   </script>
 <div class="row" style="min-height:300px;">
   <h3>Contact Us</h3>
