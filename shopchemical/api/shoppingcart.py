@@ -107,6 +107,12 @@ def all_product_item_group(item_group):
 		i.route as item_route, REPLACE(delivery_time,0,'-') AS delivery_time,ig.route as group_route,i.show_get_quote,i.msds,i.brand, i.stock_uom,
 		case 
 			WHEN 1 = 1 THEN 
+				(select FORMAT(old_price_list_rate,2) from `tabItem Price` where price_list='{0}' and item_code=i.item_code)
+		else
+			""
+		END AS old_price_list_rate,
+		case 
+			WHEN 1 = 1 THEN 
 				(select FORMAT(price_list_rate,2) from `tabItem Price` where price_list='{0}' and item_code=i.item_code)
 		else
 			""
@@ -140,8 +146,25 @@ def get_brandwise_item(brand):
 
 @frappe.whitelist(allow_guest=True)
 def get_item_detail(item_code):
-	item_list = frappe.db.sql("""select name,item_code,item_group,website_image,image,thumbnail,
-		route as item_route, REPLACE(delivery_time,0,'-') AS delivery_time,show_get_quote,msds,brand from tabItem where item_code='{0}'""".format(item_code),as_dict=1)
+	price_list_name = frappe.db.sql("""select value from tabSingles where doctype='Shopping Cart Settings' and field='price_list'""",as_dict=1)
+	price_list_name=price_list_name[0]['value']
+
+	item_list = frappe.db.sql("""select name,item_code,item_group,
+		website_image,image,thumbnail,
+		route as item_route, REPLACE(delivery_time,0,'-') AS delivery_time,show_get_quote,msds,
+		case 
+			WHEN 1 = 1 THEN 
+				(select FORMAT(old_price_list_rate,2) from `tabItem Price` where price_list='{0}' and item_code=i.item_code)
+		else
+			""
+		END AS old_price_list_rate,
+		case 
+			WHEN 1 = 1 THEN 
+				(select FORMAT(price_list_rate,2) from `tabItem Price` where price_list='{0}' and item_code=i.item_code)
+		else
+			""
+		END AS price_list_rate,
+		brand from tabItem i where item_code='{1}'""".format(price_list_name,item_code),as_dict=1)
 	return item_list
 
 @frappe.whitelist(allow_guest=True)
