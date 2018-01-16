@@ -150,7 +150,7 @@ def get_item_detail(item_code):
 	price_list_name=price_list_name[0]['value']
 
 	item_list = frappe.db.sql("""select name,item_code,item_group,
-		website_image,image,thumbnail,
+		website_image,image,thumbnail,stock_uom,
 		route as item_route, REPLACE(delivery_time,0,'-') AS delivery_time,show_get_quote,msds,
 		case 
 			WHEN 1 = 1 THEN 
@@ -164,6 +164,12 @@ def get_item_detail(item_code):
 		else
 			""
 		END AS price_list_rate,
+		case 
+			WHEN 1 = 1 THEN 
+				(select currency from `tabItem Price` where price_list='{0}' and item_code=i.item_code)
+		else
+			""
+		END AS currency,
 		brand from tabItem i where item_code='{1}'""".format(price_list_name,item_code),as_dict=1)
 	return item_list
 
